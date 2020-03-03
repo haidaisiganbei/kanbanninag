@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <el-comtainer>
+    <el-container>
       <el-header>
         <div class="nav">
           <router-link to="/">首页</router-link>|
           <router-link to="/about">写博客</router-link>
         </div>
       </el-header>
-    </el-comtainer>
-
-    <router-view />
-    <div class="player">
+    </el-container>
+    <el-container>
+      <el-main>
+        <router-view />
+      </el-main>
+      <el-aside width='400px'>
+          <div class="player">
       <aplayer
         autoplay
         float
@@ -19,7 +22,9 @@
         :list='list'
         :music="list[1]"
       />
-    </div>
+          </div>
+      </el-aside>
+    </el-container>
   </div>
 </template>
 
@@ -94,7 +99,7 @@ export default {
   width: 300px;
   position: fixed;
   right: 50px;
-  top: 50px;
+  top: 100px;
 }
 .nav {
   padding: 20px;

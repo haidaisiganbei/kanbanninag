@@ -2,8 +2,8 @@
   <div class="home">
 
     <div
-      style="margin-bottom:20px;width:700px;"
-      v-for='(item,index) in "1231"'
+      style="margin-bottom:20px;"
+      v-for='(item,index) in "12311232131"'
       :key='index'
     >
       <el-card
@@ -28,7 +28,12 @@
         </div>
       </el-card>
     </div>
-
+    <el-pagination
+  small
+  layout="prev, pager, next"
+  :total="50">
+</el-pagination>
+  <el-backtop></el-backtop>
   </div>
 </template>
 
@@ -45,3 +50,25 @@ export default {
   }
 }
 </script>
+<style>
+  .text {
+    font-size: 14px;
+  }
+
+  .item {
+    margin-bottom: 18px;
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    content: "";
+  }
+  .clearfix:after {
+    clear: both
+  }
+
+  .box-card {
+    width: 80%;
+  }
+</style>
